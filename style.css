@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Poppins';
+    src: 
+         url('./assets/fonts/poppins-extrabolditalic-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: 
+         url('./assets/fonts/poppins-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: 
+         url('./assets/fonts/poppins-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Poppins';
+    src:
+         url('./assets/fonts/poppins-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppinsitalic';
+    src: 
+         url('./assets/fonts/poppins-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: 
+         url('./assets/fonts/poppins-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-neutral-off-white: hsl(0, 0%, 94%);
+    --clr-neutral-light-grey: hsl(0, 0%, 86%);
+    --clr-neutral-smokey-grey: hsl(0, 1%, 44%);
+    --clr-neutral-off-black: hsl(0, 0%, 8%);
+    --ff-base: 'Poppins',sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+}
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+    line-height: 1.1;
+    overflow-wrap: break-word;
+}
+img,svg{
+    max-width: 100%;
+    display: block;
+}
+a,button,input,select{
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    background: none;
+    font: inherit;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-neutral-off-white);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-off-black);
+}
+.main{
+    max-width: 380px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px 15px 80px 15px;
+    background-color: var(--clr-neutral-white);
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.form__flex-group{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;  
+    align-items: center;
+    gap: .75rem;
+}
+.form__element{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: .5rem;
+}
+.form__label{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-smokey-grey);
+}
+.form__input{
+    width: 100px;
+    height: 50px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--clr-neutral-light-grey);
+    font-size: 1.5rem;
+    font-weight: var(--fw-extrabold);
+}
+.form__input:hover{
+    cursor: pointer;
+    border: 1px solid var(--clr-neutral-smokey-grey);
+    transition: all ease-out 200ms;
+}
+.form_error{
+    height: 10px;
+    font-size: .525rem;
+    font-style: italic;
+    font-weight: var(--fw-regular);
+    color: var(--clr-primary-light-red);
+}
+.form__button-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.form__button{
+    width: 60px;
+    height: 60px;
+    padding: .25rem;
+    border-radius: 50%;
+    background-color: var(--clr-primary-purple);
+}
+.form__button:hover{
+    cursor: pointer;
+    background-color: var(--clr-neutral-off-black);
+    transition: all ease-out 100ms;
+}
+.form__button img{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+.form__button::before{
+    opacity: 50%;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+    background-color: var(--clr-neutral-light-grey);
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin: 2rem auto 0;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: var(--fw-extrabold);
+}
+.result__text{
+    display: inline-flex;
+}
+.result__number{
+    margin-right: .5rem;
+    color: var(--clr-primary-purple);
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media (min-width:768px){
+    .main{
+        max-width: 700px;
+        width: 35rem;
+        padding: 2rem;
+    }
+    .form{
+        align-items: flex-start;
+    }
+    .form__input{
+        width: 120px;
+    }
+    .form_error{
+        font-size: .625rem;
+    }
+    .form__button-group{
+        align-items: flex-end;
+    }
+    .result__text{
+        font-size: 4rem;
+    }
+}

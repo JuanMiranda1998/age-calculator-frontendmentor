@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main class="main">
+    <form class="form">
+      <ul class="form__flex-group">
+        <li class="form__element">
+          <label class="form__label" id="dayLabel" for="day">Day</label>
+          <input class="form__input" id="day" type="text" placeholder="DD">
+          <p class="form_error" id="errorDay"></p>
+        </li>
+        <li class="form__element">
+          <label class="form__label" id="monthLabel" for="month">Month</label>
+          <input class="form__input" id="month" type="text" placeholder="MM">
+          <p class="form_error" id="errorMonth"></p>
+        </li>
+        <li class="form__element">
+          <label class="form__label" id="yearLabel" for="year">Year</label>
+          <input class="form__input" id="year" type="text" placeholder="YYYY">
+          <p class="form_error" id="errorYear"></p>
+        </li>
+      </ul>
+      <div class="form__button-group">
+        <button class="form__button" id="submitButton">
+          <img src="./assets/images/icon-arrow.svg">
+        </button>
+      </div>
+    </form>
+    <ul class="result">
+      <li class="result__text"><div class="result__number" id="yearResult">--</div> years</li>
+      <li class="result__text"><div class="result__number" id="monthResult">--</div> months</li>
+      <li class="result__text"><div class="result__number" id="dayResult">--</div> days</li>
+    </ul>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/JuanMiranda1998">Juan Miranda</a>.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
